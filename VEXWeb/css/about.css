@@ -247,4 +247,11 @@
     .photowall ul {
         margin-left: -10px;
     }
+    .thumbnail {
+        width: 250px;
+    }
+    .thumbnail img {
+        width: 112.5px;
+        height: 195px;
+    }
 }
