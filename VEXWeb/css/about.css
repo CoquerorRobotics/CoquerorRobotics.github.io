@@ -1,15 +1,18 @@
 /* banner */
 
 .banner {
-    height: 220px;
+    height: 400px;
+    width: 868px;
     text-align: center;
     overflow: hidden;
-    margin: 30px;
+    margin: 30px auto;
     line-height: 30px;
     text-shadow: #fff 1px 1px 1px;
-    background: url(https://cdn.jsdelivr.net/gh/coquerorrobotics/coquerorrobotics.github.io/VEXWeb/images/bg.png) center no-repeat;
-    background-size: 1060px 800px;
-    padding: 40px 0 0 0;
+    background: url(https://cdn.jsdelivr.net/gh/coquerorrobotics/coquerorrobotics.github.io/VEXWeb/images/bg1.jpg) center no-repeat;
+    /* background-size: ; */
+    background-position: 0px -120px;
+    background-size: 100%;
+    padding: 0;
 }
 
 
@@ -127,7 +130,7 @@
     left: 20px;
     display: block;
     width: 88px;
-    background: url(../images/dtime.png) no-repeat;
+    background: url(https://cdn.jsdelivr.net/gh/coquerorrobotics/coquerorrobotics.github.io/VEXWeb/images/dtime.png) no-repeat;
     color: #FFF;
     height: 46px;
     line-height: 30px;
@@ -198,9 +201,20 @@
 
 .about {
     width: 90%;
-    margin: 30px auto;
+    margin: 10px auto 30px;
     overflow: hidden;
     line-height: 22px;
+}
+
+
+/* 
+.thumbnail {
+    height: 620px;
+} */
+
+.thumbnail img {
+    width: 300px;
+    height: 520px;
 }
 
 .about h2 {
@@ -219,8 +233,12 @@
 .about p {
     margin-bottom: 20px;
     text-indent: 28px;
-    font-size: 14px;
+    font-size: 18px;
     color: #2A7497;
+}
+
+.test .photowall {
+    margin-left: 28px;
 }
 
 @media(max-width: 1200px) {
@@ -235,6 +253,7 @@
     }
     .test .photowall {
         margin: 0;
+        width: 100%;
     }
     .photowall .wall_a li h2 {
         line-height: 12px;
@@ -248,10 +267,38 @@
         margin-left: -10px;
     }
     .thumbnail {
-        width: 250px;
+        width: 292px;
+        height: 205px;
+        /* overflow: auto; */
     }
     .thumbnail img {
         width: 112.5px;
         height: 195px;
+        float: left;
     }
+    .thumbnail .caption {
+        width: 168px;
+        float: right;
+        padding-right: 0;
+    }
+    .thumbnail .caption p {
+        font-size: 18px;
+        height: 186px;
+        overflow: auto;
+    }
+    .about {
+        margin: 0 auto;
+    }
+}
+
+.clearfix:after {
+    content: ".";
+    /*尽量不要为空，一般写一个点*/
+    height: 0;
+    /*盒子高度为0，看不见*/
+    display: block;
+    /*插入伪元素是行内元素，要转化为块级元素*/
+    visibility: hidden;
+    /*content有内容，将元素隐藏*/
+    clear: both;
 }
